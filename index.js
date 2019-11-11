@@ -31,7 +31,7 @@ function aPhone(){
 	if(results1 <= 2){
 		console.log("You found a phone!");
 } else if(results1 >= 3){
-		console.log("You took too long! The killer has found you!");
+		console.log("You took too long! The killer has found you! No one will ever see you again!");
 }
 }
 
@@ -39,7 +39,7 @@ function aBedroom(){
 	if(results2 <= 3){
 	console.log("You safely made it to the bedroom!");
 } else if(results2 >= 4){
-	console.log("Oh no! You ran into the killer!");
+	console.log("Oh no! You took a wrong turn and have been killed!");
 }
 }
 function aWeapon(){
@@ -85,7 +85,7 @@ function aEnd(){
 	if(results6 <= 5){
 	console.log("The police have stormed the house and secured every room with the killer unable to be found, as he has escaped ALIVE! To kill another day!");
 } else if(results6 >= 6 && results6 <= 10){
-	console.log("You suddenly awake, what a terrible nightmare that way!");
+	console.log("You suddenly awake, what a terrible nightmare that was!");
 } else if(results6 >= 16 && results6 <= 19){
 	console.log("The killer is found dead, as he has taken his own life!");
 } else if(results6 = 20){
