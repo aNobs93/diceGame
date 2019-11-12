@@ -5,6 +5,7 @@ body{
 	-o-background-size:cover;
 	background size:cover;
 	margin:0;
+/*	height: 100%;*/
 }
 .gameName{
 	font-size: 800%;
@@ -30,6 +31,13 @@ body{
        4px 38px 1px #FE0000,
        4px 40px 2px #FF0000;
 /*	-webkit-animation: pulse linear .5s infinite;*/
+}
+.instructionInfo{
+	background-color: black;
+	border-radius: 20px;
+	color: white;
+	padding: 0.5em 0.2em 0.8em 0.5em;
+	display: inline-block;
 }
 /*@-webkit-keyframes pulse{
 	0%{ width:200px; }
