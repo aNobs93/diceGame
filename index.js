@@ -1,18 +1,18 @@
 "use strict";
 function gameStart(){
 	let userName = prompt("Please enter a username.")
+	if(userName === null){
+		alert("maybe next time!")
+			return;
+	}
 	let start = prompt(userName +", are you ready to begin?\nYes/No");
 	let letsGo = ["yes", "sure", "maybe", "okay", "start", "ok", "yeah","Yes","YES","Sure","Maybe","Start","OK","Ok"];
-	
 	if(letsGo.includes(start)){
-		if(userName === null){
-			alert("maybe next time!")
-		}else{
 		alert(userName + ", you awake in the middle of the night on your couch to a very eerie figure standing in the doorway! ")
 		alert(userName + " quick! It's the killer thats been on the news, and you're his next victim you must find your phone and call 911!")
 		gameCommands(userName);
 	}
-} else{
+	else{
 	alert("Maybe next time!");
 	}
 }
@@ -137,7 +137,7 @@ function aAttack(weapon, userName){
 } else if(weapon === 3 || weapon === 4){ 
 	console.log(userName + ", with a swift blow to the head you managed to knock the killer down allowing you a breif opportunity to run away and hide until the police arrive!");
 	alert(userName + ", with a swift blow to the head you managed to knock the killer down allowing you a breif opportunity to run away and hide until the police arrive!");
-} else if(results4 >= 9){
+} else if(weapon >= 9){
 	console.log(userName + ", luckily fighting is not your forte. A noise from the bathroom draws the killer away allowing you the time to run away and hide somewhere else!");
 	alert(userName + ", luckily fighting is not your forte.\nA noise from the bathroom draws the killer away allowing you the time to run away and hide somewhere else!");
 }
@@ -161,20 +161,21 @@ function aMove(results5, userName){
 }
 function aEnd(results6, userName){
 	if(results6 <= 5){
-	console.log("The police have stormed the house and secured every room with the killer unable to be found, as he has escaped ALIVE! To kill another day!");
+	console.log(userName + " the police have stormed the house and secured every room with the killer unable to be found, as he has escaped ALIVE! To kill another day!");
+	alert(userName + ", the police have stormed the house and secured every room with the killer unable to be found, as he has escaped ALIVE! To kill another day!")
 } else if(results6 >= 6 && results6 <= 10){
-	console.log("You suddenly awake on your couch, what a terrible nightmare that was!");
+	console.log(userName + " you suddenly awake on your couch, what a terrible nightmare that was!");
+	alert(userName + " you suddenly awake on your couch, what a terrible nightmare that was!");
 } else if(results6 >= 16 && results6 <= 19){
-	console.log("The killer is found dead, as he has taken his own life!");
+	console.log(userName + ", the killer takes 7 rounds to the chest. But not before taking 2 officers with him.");
+	alert(userName + ", the killer takes 7 rounds to the chest. But not before taking 2 officers with him.");
 } else if(results6 = 20){
-	console.log("Scared and frantic, you run up on an officer and spook him. He draws his weapon and shoots! You're dead!");
+	console.log("Scared and frantic, you sneak up on an officer and spook him. He draws his weapon and shoots! You're dead!");
+	alert("Scared and frantic, you sneak up on an officer and spook him. He draws his weapon and shoots! You're dead!");
 	return true;
 }
 }
 
-// function delayPause(){
-
-// }
 
 function myFunction(){
 	gameStart();
